@@ -18,11 +18,10 @@ jobs:
       - name: "Install Dependencies"
         run: |
           python -m pip install --upgrade pip
-          # smtplib and email are part of Python's standard library, no need to install
-          pip install requests  # (example: install any extra deps if needed)
+          
 
       - name: "Send Email by Executing Python Script"
-        run: python send_email.py
+        run: python send_mail.py
         env:
           WORKFLOW_NAME: ${{ github.workflow }}
           REPO_NAME: ${{ github.repository }}
