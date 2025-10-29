@@ -21,7 +21,7 @@ jobs:
           
 
       - name: "Send Email by Executing Python Script"
-        run: python send_mail.py
+        run: python script.py
         env:
           WORKFLOW_NAME: ${{ github.workflow }}
           REPO_NAME: ${{ github.repository }}
